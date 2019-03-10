@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="navbar header has-shadow is-primary"
+      class="navbar header has-shadow is-primary is-fixed-top"
       role="navigation"
       aria-label="main navigation">
       <div class="navbar-brand">
@@ -31,10 +31,8 @@
       </div>
     </nav>
 
-    <section class="main-content columns">
-      <div class="container column is-10">
-        <nuxt />
-      </div>
+    <section class="main-content">
+      <nuxt />
     </section>
   </div>
 </template>
