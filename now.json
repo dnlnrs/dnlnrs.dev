@@ -1,7 +1,7 @@
 {
   "name": "dnlnrs.dev",
   "version": 2,
-  "alis": "dnlnrs.dev",
+  "alias": "dnlnrs.dev",
   "builds": [
     { "src": "package.json", "use": "@now/static-build" }
   ] 
