@@ -6,6 +6,8 @@ $colors: (
   "primary": ($primary, $primary-invert)
 );
 
+$navbar-item-hover-color: $primary;
+
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
 

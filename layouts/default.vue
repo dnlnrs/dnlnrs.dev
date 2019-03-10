@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="navbar header has-shadow is-primary is-fixed-top"
+      class="navbar header is-fixed-top"
       role="navigation"
       aria-label="main navigation">
       <div class="navbar-brand">
@@ -18,14 +18,14 @@
       </div>
       <div class="navbar-menu">
         <div class="navbar-end">
-          <div class="navbar-item">
+          <div class="navbar-item inactive">
             Who am I
           </div>
-          <div class="navbar-item">
+          <a target="_blank" href="https://drive.google.com/open?id=0B3RKPTAd6l8OVWpaYW5KdjlmbVE" class="navbar-item">
             Résumé
-          </div>
-          <div class="navbar-item">
-            Stuff I find online
+          </a>
+          <div class="navbar-item inactive">
+            Stuff I found online
           </div>
         </div>
       </div>
@@ -49,7 +49,9 @@ export default {
 <style lang="stylus" scoped>
 .logo
   font-family 'Fonarto', sans-serif
-  font-size 23px
+  font-size 25px
+.inactive
+  opacity .5
 </style>
 
 
