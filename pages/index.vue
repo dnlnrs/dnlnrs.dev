@@ -8,7 +8,7 @@
               <img class="is-rounded" src="~/assets/images/avatar.png">
             </figure>
             <p class="is-size-5">Hello! I'm <strong>Daniele</strong>, nice to meet you!</p>
-            <p class="is-size-5">I'm a <em>Full Stack Web Developer</em> currenty working @</p>
+            <p class="is-size-5">I'm a <em>Full Stack Web Developer</em> currently working @</p>
             <a href="https://www.weroad.it" target="_blank"><img class="logo-wr" src="~/assets/images/logo-wr.svg"></a>
           </div>
         </div>
