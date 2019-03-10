@@ -30,7 +30,6 @@
         </div>
       </div>
     </nav>
-
     <section class="main-content">
       <nuxt />
     </section>

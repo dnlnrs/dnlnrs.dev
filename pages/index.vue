@@ -1,21 +1,19 @@
 <template>
-  <section>
-    <div class="columns is-vcentered is-mobile">
-      <div class="column is-6 has-text-centered hero is-fullheight">
-        <div class="hero-body">
-          <div class="container">
-            <figure class="image is-128x128">
-              <img class="is-rounded" src="~/assets/images/avatar.png">
-            </figure>
-            <p class="is-size-5">Hello! I'm <strong>Daniele</strong>, nice to meet you!</p>
-            <p class="is-size-5">I'm a <em>Full Stack Web Developer</em> currently working @</p>
-            <a href="https://www.weroad.it" target="_blank"><img class="logo-wr" src="~/assets/images/logo-wr.svg"></a>
-          </div>
+  <div class="columns is-vcentered">
+    <div class="column is-6 has-text-centered hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <figure class="image is-128x128">
+            <img class="is-rounded" src="~/assets/images/avatar.png">
+          </figure>
+          <p class="is-size-5">Hello! I'm <strong>Daniele</strong>, nice to meet you!</p>
+          <p class="is-size-5">I'm a <em>Full Stack Web Developer</em> currently working @</p>
+          <a href="https://www.weroad.it" target="_blank"><img class="logo-wr" src="~/assets/images/logo-wr.svg"></a>
         </div>
       </div>
-      <div class="column is-6 with-bg"></div>
     </div>
-  </section>
+    <div class="column is-6 with-bg is-hidden-mobile"></div>
+  </div>
 </template>
 
 <script>
