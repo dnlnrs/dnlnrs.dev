@@ -38,6 +38,13 @@
 
 <script>
 export default {
+  head() {
+    return {
+      htmlAttrs: {
+        class: 'has-navbar-fixed-top'
+      }
+    }
+  }
 }
 </script>
 
