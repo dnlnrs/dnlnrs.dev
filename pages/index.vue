@@ -36,7 +36,7 @@ figure.image
 .logo-wr
   padding-top: 10px
 .with-bg
-  background-image url("../assets/images/bg1.jpg")
+  background-image url("../assets/images/bg2.jpeg")
   background-position center center
   background-size cover
 .column
