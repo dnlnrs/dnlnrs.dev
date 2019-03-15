@@ -21,9 +21,25 @@
           <div class="navbar-item inactive">
             Who am I
           </div>
-          <a target="_blank" href="https://drive.google.com/open?id=0B3RKPTAd6l8OVWpaYW5KdjlmbVE" class="navbar-item">
-            Résumé
-          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Résumé
+            </a>
+            <div class="navbar-dropdown">
+              <a target="_blank" href="https://drive.google.com/open?id=0B3RKPTAd6l8OVWpaYW5KdjlmbVE" class="navbar-item">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <p>Italian</p>
+              </a>
+              <a target="_blank" class="navbar-item inactive">
+                <span class="icon">
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <p>English</p>
+              </a>
+            </div>
+          </div>  
           <div class="navbar-item inactive">
             Stuff I found online
           </div>
