@@ -5,11 +5,9 @@
       role="navigation"
       aria-label="main navigation">
       <div class="navbar-brand">
-        <a
-          class="navbar-item logo"
-          href="/">
+        <nuxt-link class="navbar-item logo" to="/" @click.native="mobileMenuActive = false">
           dnlrns
-        </a>
+        </nuxt-link>
         <div :class="`navbar-burger ${mobileMenuActive ? 'is-active' : ''}`" @click="toggleMobileMenu">
           <span/>
           <span/>
@@ -18,9 +16,9 @@
       </div>
       <div :class="`navbar-menu ${mobileMenuActive ? 'is-active' : ''}`">
         <div class="navbar-end">
-          <div class="navbar-item inactive">
+          <nuxt-link class="navbar-item" to="/who-am-i" @click.native="mobileMenuActive = false">
             Who am I
-          </div>
+          </nuxt-link>
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
               Résumé
@@ -80,6 +78,8 @@ export default {
   font-size 25px
 .inactive
   opacity .5
+.nuxt-link-active
+  color: #008080;
 </style>
 
 
