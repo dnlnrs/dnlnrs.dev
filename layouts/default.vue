@@ -10,13 +10,13 @@
           href="/">
           dnlrns
         </a>
-        <div class="navbar-burger">
+        <div :class="`navbar-burger ${mobileMenuActive ? 'is-active' : ''}`" @click="toggleMobileMenu">
           <span/>
           <span/>
           <span/>
         </div>
       </div>
-      <div class="navbar-menu">
+      <div :class="`navbar-menu ${mobileMenuActive ? 'is-active' : ''}`">
         <div class="navbar-end">
           <div class="navbar-item inactive">
             Who am I
@@ -25,7 +25,7 @@
             <a class="navbar-link">
               Résumé
             </a>
-            <div class="navbar-dropdown">
+            <div class="navbar-dropdown is-boxed">
               <a target="_blank" href="https://drive.google.com/open?id=0B3RKPTAd6l8OVWpaYW5KdjlmbVE" class="navbar-item">
                 <span class="icon">
                   <i class="fas fa-file-pdf"></i>
@@ -59,6 +59,16 @@ export default {
       htmlAttrs: {
         class: 'has-navbar-fixed-top'
       }
+    }
+  },
+  data () {
+    return {
+      mobileMenuActive: false
+    }
+  },
+  methods: {
+    toggleMobileMenu () {
+      this.mobileMenuActive = !this.mobileMenuActive
     }
   }
 }
