@@ -1,4 +1,3 @@
-# Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
 logs
@@ -79,3 +78,6 @@ dist
 
 # IDE
 .idea
+
+# OS
+.DS_Store
