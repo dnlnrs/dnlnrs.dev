@@ -3,10 +3,10 @@ services:
   nuxt.dnlnrs.dev:
     image: "node:8-jessie"
     working_dir: /home/node/app
-    expose:
-      - 3000
     environment:
       - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=3000
     volumes:
       - ./:/home/node/app
     labels:
@@ -14,7 +14,6 @@ services:
       - "traefik.backend=nuxt.dnlnrs.dev"
       - "traefik.frontend.rule=Host:dnlnrs.dev"
       - "traefik.passHostHeader=true"
-      - "traefik.docker.network=web"
       - "traefik.port=3000"
     command: /bin/sh -c "yarn install && yarn build && yarn start"
     networks:
