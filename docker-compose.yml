@@ -1,6 +1,6 @@
 version: "3"
 services:
-  nuxt.dnlrns.dev:
+  nuxt.dnlnrs.dev:
     image: "node:8-jessie"
     working_dir: /home/node/app
     expose:
@@ -11,8 +11,8 @@ services:
       - ./:/home/node/app
     labels:
       - "traefik.enable=true"
-      - "traefik.backend=nuxt.dnlrns.dev"
-      - "traefik.fronted.rule=Host:dnlnrs.dev"
+      - "traefik.backend=nuxt.dnlnrs.dev"
+      - "traefik.frontend.rule=Host:dnlnrs.dev"
       - "traefik.passHostHeader=true"
       - "traefik.docker.network=web"
     command: /bin/sh -c "yarn install && yarn build && yarn start"
