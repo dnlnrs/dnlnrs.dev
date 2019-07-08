@@ -11,5 +11,5 @@ services:
       - ./:/home/node/app
     labels:
       - traefik.enable=true
-      - traefik.fronted.rule=Host.dnlrs.dev
+      - traefik.fronted.rule=Host.dnlnrs.dev
     command: /bin/sh -c "yarn install && yarn build && yarn start"
