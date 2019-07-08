@@ -11,6 +11,7 @@ services:
       - ./:/home/node/app
     labels:
       - "traefik.enable=true"
+      - "traefik.backend=nuxt.dnlrns.dev"
       - "traefik.fronted.rule=Host:dnlnrs.dev"
       - "traefik.passHostHeader=true"
       - "traefik.docker.network=web"
