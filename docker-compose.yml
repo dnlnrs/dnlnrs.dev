@@ -15,6 +15,7 @@ services:
       - "traefik.frontend.rule=Host:dnlnrs.dev"
       - "traefik.passHostHeader=true"
       - "traefik.docker.network=web"
+      - "traefik.port=3000"
     command: /bin/sh -c "yarn install && yarn build && yarn start"
     networks:
       - web
