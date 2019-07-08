@@ -9,4 +9,7 @@ services:
       - NODE_ENV=production
     volumes:
       - ./:/home/node/app
+    labels:
+      - traefik.enable=true
+      - traefik.fronted.rule=Host.dnlrs.dev
     command: /bin/sh -c "yarn install && yarn build && yarn start"
