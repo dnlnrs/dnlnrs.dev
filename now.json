@@ -1,9 +1,0 @@
-{
-  "name": "dnlnrs.dev",
-  "version": 2,
-  "alias": ["dnlnrs.dev", "www.danielelenares.it"],
-  "regions": ["cdg1"],
-  "builds": [
-    { "src": "package.json", "use": "@now/static-build" }
-  ] 
-}
