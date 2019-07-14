@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  dlnrs-dev:
+    image: node:8-jessie
+    command: /bin/sh -c "yarn install && yarn build && yarn start"
+    environment:
+      - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=3000
+    networks:
+      - traefik-public
+    deploy:
+      replicas: 1
+      labels:
+        - traefik.frontend.rule=Host:dnlnrs.dev
+        - traefik.enable=true
+        - traefik.port=3000
+        - traefik.tags=traefik-public
+        - traefik.docker.network=traefik-public
+        - traefik.redirectorservice.frontend.entryPoints=http
+        - traefik.redirectorservice.frontend.redirect.entryPoint=https
+        - traefik.webservice.frontend.entryPoints=https
+
+networks:
+  traefik-public:
+    external: true
