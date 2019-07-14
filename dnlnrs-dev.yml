@@ -4,12 +4,15 @@ services:
   dlnrs-dev:
     image: node:8-jessie
     command: /bin/sh -c "yarn install && yarn build && yarn start"
+    working_dir: /home/node/app
     environment:
       - NODE_ENV=production
       - HOST=0.0.0.0
       - PORT=3000
     networks:
       - traefik-public
+    volumes:
+      - ./:/home/node/app
     deploy:
       replicas: 1
       labels:
