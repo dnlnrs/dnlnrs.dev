@@ -14,9 +14,9 @@ services:
     volumes:
       - ./:/home/node/app
     deploy:
-      replicas: 1
+      replicas: 2
       labels:
-        - traefik.frontend.rule=Host:dnlnrs.dev
+        - traefik.frontend.rule=Host:dnlnrs.dev,danielelenares.it
         - traefik.enable=true
         - traefik.port=3000
         - traefik.tags=traefik-public
