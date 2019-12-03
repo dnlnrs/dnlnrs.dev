@@ -1,10 +1,12 @@
 <template>
-  <div>
+  <section class="hero is-fullheight">
     <Navbar />
-    <section class="main-content">
-      <nuxt />
-    </section>
-  </div>
+    <div class="hero-body">
+      <div class="container is-fluid">
+        <nuxt />
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>

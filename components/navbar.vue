@@ -1,8 +1,5 @@
 <template>
-  <nav
-    class="navbar header is-fixed-top"
-    role="navigation"
-    aria-label="main navigation">
+  <nav class="navbar header" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <nuxt-link class="navbar-item logo" to="/" @click.native="mobileMenuActive = false">
         dnlnrs
