@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass');
-@import "~bulma/sass/utilities/_all";
 
-$primary: #008080;
-
-$colors: (
-  "primary": ($primary, $primary-invert)
-);
-
-$navbar-item-hover-color: $primary;
-$navbar-dropdown-arrow: $primary;
-
-$family-sans-serif: "Overpass", sans-serif;
-$family-primary: $family-sans-serif;
-
+@import "variables";
 @import "~bulma";
 
 @font-face {

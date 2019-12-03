@@ -1,0 +1,14 @@
+@import "~bulma/sass/utilities/_all";
+
+$primary: #008080;
+
+$colors: (
+  "primary": ($primary, $primary-invert)
+);
+
+$navbar-item-hover-color: $primary;
+$navbar-dropdown-arrow: $primary;
+$navbar-height: 4rem;
+
+$family-sans-serif: "Overpass", sans-serif;
+$family-primary: $family-sans-serif;
