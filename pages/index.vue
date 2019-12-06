@@ -8,7 +8,9 @@
       <p class="is-size-5">I'm a <em><strong>Full Stack Web Developer</strong></em> currently working as <strong><em>CTO</em></strong> @</p>
       <a href="https://www.bloovery.com" target="_blank"><img class="current-company-logo" src="~/assets/images/logo-bloovery.png"></a>
     </div>
-    <div class="column is-6 is-hidden-mobile"></div>
+    <div class="column is-6 is-hidden-mobile has-text-centered">
+      <img width="70%" src="~/assets/images/programming_illustration.svg" alt="">
+    </div>
   </div>
 </template>
 
