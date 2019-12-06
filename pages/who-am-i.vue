@@ -1,8 +1,7 @@
 <template>
   <div class="columns is-vcentered">
     <div class="column is-6 has-text-centered">
-      <div class="profile-image">
-      </div>
+      <img width="70%" class="profile-image" src="~/assets/images/face.jpg" alt="">
     </div>
     <div class="column is-6 has-text-centered">
       <p>
@@ -71,11 +70,4 @@ export default {
     padding-right: 1em
     -webkit-filter: drop-shadow(3px 1px 3px rgba(90, 90, 88, 0.7));
     filter: drop-shadow(3px 1px 3px rgba(90, 90, 88, 0.7));
-  .profile-image
-    background-image: url("../assets/images/face.jpg");
-    height: 100%;
-    width: 100%;
-    display: block;
-    background-position: center 0;
-    background-size: cover;
 </style>
