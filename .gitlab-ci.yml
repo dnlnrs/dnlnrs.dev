@@ -1,0 +1,43 @@
+stages:
+  - Build and push image
+  - Deploy to cluster
+
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay2
+
+build_production:
+  only:
+    - production
+  image: docker:19
+  services:
+    - docker:19-dind
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - apk add --update curl && rm -rf /var/cache/apk/*
+  stage: Build and push image
+  script:
+    - docker info
+    - docker pull $CI_REGISTRY_IMAGE:latest || true
+    - >
+      docker build
+      --cache-from $CI_REGISTRY_IMAGE:latest
+      --tag $CI_REGISTRY_IMAGE:production
+      .
+    - docker push $CI_REGISTRY_IMAGE:production
+
+deploy_production:
+  stage: Deploy to cluster
+  environment:
+    name: production
+    url: https://dnlnrs.dev
+  only:
+    - production
+  before_script:
+    - apt-get -qq update
+    - apt-get install -y jq
+  script:
+    - >
+      CAPTAINTOKEN=$(curl -X POST https://captain.cluster.codebits.it/api/v2/login -d '{"password": "'$CAPTAINPSW'"}' -H "Content-Type: application/json" -H "x-namespace: captain" | jq .data.token | cut -d "\"" -f 2)
+    - >
+      curl -X POST https://captain.cluster.codebits.it/api/v2/user/apps/appdata/live-dnlnrsdev -F captainDefinitionContent="{\"schemaVersion\": 2, \"imageName\": \"$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA\"}" -H "x-namespace: captain" -H "x-captain-auth: $CAPTAINTOKEN"
