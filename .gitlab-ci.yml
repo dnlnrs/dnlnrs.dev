@@ -24,7 +24,7 @@ build_production:
       --cache-from $CI_REGISTRY_IMAGE:latest
       --tag $CI_REGISTRY_IMAGE:production
       .
-    - docker push $CI_REGISTRY_IMAGE:production
+    - docker push $CI_REGISTRY_IMAGE
 
 deploy_production:
   stage: Deploy to cluster
