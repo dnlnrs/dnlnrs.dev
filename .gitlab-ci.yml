@@ -8,7 +8,7 @@ variables:
 
 build_production:
   only:
-    - production
+    - master
   image: docker:19
   services:
     - docker:19-dind
@@ -32,7 +32,7 @@ deploy_production:
     name: production
     url: https://dnlnrs.dev
   only:
-    - production
+    - master
   before_script:
     - apt-get -qq update
     - apt-get install -y jq
