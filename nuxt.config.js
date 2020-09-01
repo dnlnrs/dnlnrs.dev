@@ -8,6 +8,9 @@ module.exports = {
     port: process.env.PORT || 3000
   },
   target: 'static',
+  router: {
+    base: '/dnlnrs.dev'
+  },
   /*
   ** Headers of the page
   */
