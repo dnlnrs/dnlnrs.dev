@@ -2,7 +2,7 @@
   "name": "dnlnrs.dev",
   "version": "1.0.0",
   "description": "Daniele Lenares' personal website",
-  "author": "Daniele Lenares",
+  "author": "Daniele Lenares <daniele.lenares@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
