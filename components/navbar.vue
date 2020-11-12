@@ -24,9 +24,18 @@
           </span>
           <span>Résumé</span>
         </a>
-        <div class="navbar-item inactive">
-          Stuff I found online
-        </div>
+        <nuxt-link class="navbar-item" to="/snippets" @click.native="mobileMenuActive = false">
+          <span class="icon">
+            <i class="las la-code"></i>
+          </span>
+          <span>Snippets</span>
+        </nuxt-link>
+        <nuxt-link class="navbar-item" to="/blog" @click.native="mobileMenuActive = false">
+          <span class="icon">
+            <i class="las la-newspaper"></i>
+          </span>
+          <span>Blog</span>
+        </nuxt-link>
       </div>
     </div>
   </nav>
