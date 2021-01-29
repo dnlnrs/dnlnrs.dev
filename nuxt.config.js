@@ -33,9 +33,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
-    '@/assets/main.scss'
-  ],
+  css: [],
 
   /*
   ** Plugins to load before mounting the App
@@ -51,6 +49,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios'
   ],
+
+  buildModules: ['@nuxtjs/tailwindcss'],
+
   /*
   ** Axios module configuration
   */
