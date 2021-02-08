@@ -7,7 +7,7 @@
     </div>
     <div class="menu flex flex-row pr-3 space-x-4">
       <div>
-        <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-4 px-2" to="/who-am-i" @click.native="mobileMenuActive = false">
+        <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-3 px-2 rounded-lg font-light" to="/who-am-i" @click.native="mobileMenuActive = false">
           <span class="icon">
             <i class="las la-user"></i>
           </span>
@@ -15,7 +15,7 @@
         </nuxt-link>
       </div>
       <div>
-        <a class="hover:bg-coolGray-200 hover:text-primary py-4 px-2" href="https://drive.google.com/file/d/19KGcsqEoaJAqgnSmGSzksLA4xhSLTrZ_/view?usp=sharing" target="_blank">
+        <a class="hover:bg-coolGray-200 hover:text-primary py-3 px-2 rounded-lg font-light" href="https://drive.google.com/file/d/19KGcsqEoaJAqgnSmGSzksLA4xhSLTrZ_/view?usp=sharing" target="_blank">
           <span class="icon">
             <i class="las la-file-pdf"></i>
           </span>
@@ -23,7 +23,7 @@
         </a>
       </div>
       <div>
-        <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-4 px-2" to="/snippets" @click.native="mobileMenuActive = false">
+        <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-3 px-2 rounded-lg font-light" to="/snippets" @click.native="mobileMenuActive = false">
           <span class="icon">
             <i class="las la-code"></i>
           </span>
@@ -31,7 +31,7 @@
         </nuxt-link>
       </div>
       <div>
-        <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-4 px-2" to="/blog" @click.native="mobileMenuActive = false">
+        <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-3 px-2 rounded-lg font-light" to="/blog" @click.native="mobileMenuActive = false">
           <span class="icon">
             <i class="las la-newspaper"></i>
           </span>
