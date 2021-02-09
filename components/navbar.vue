@@ -1,9 +1,9 @@
 <template>
   <nav class="flex flex-wrap items-center justify-between h-16">
     <div class="brand">
-      <nuxt-link class="logo text-3xl text-primary pl-3" to="/" @click.native="mobileMenuActive = false">
+      <a class="logo text-3xl text-primary pl-3 bg-white" href="/" @click.native="mobileMenuActive = false">
         dnlnrs
-      </nuxt-link>
+      </a>
     </div>
     <div class="menu flex flex-row pr-3 space-x-4">
       <div>

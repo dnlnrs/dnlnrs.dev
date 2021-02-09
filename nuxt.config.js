@@ -8,6 +8,9 @@ module.exports = {
     port: process.env.PORT || 3000
   },
   target: 'static',
+  router: {
+    linkExactActiveClass: 'text-primary bg-coolGray-200'
+  },
   /*
   ** Headers of the page
   */
