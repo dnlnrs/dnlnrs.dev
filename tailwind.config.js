@@ -14,7 +14,14 @@ module.exports = {
       ...colors,
       primary: '#008080'
     },
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'display': 'display'
+      }
+    },
+    fontFamily: {
+      body: ['Overpass', 'sans-serif']
+    },
   },
   variants: {
     extend: {},

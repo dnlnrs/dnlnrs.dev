@@ -1,55 +1,43 @@
 <template>
-  <nav class="flex flex-wrap items-center justify-between h-16">
-    <div class="brand">
-      <a class="logo text-3xl text-primary pl-3 bg-white" href="/" @click.native="mobileMenuActive = false">
-        dnlnrs
-      </a>
-    </div>
-    <div class="menu flex flex-row pr-3 space-x-4">
-      <div>
-        <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-3 px-2 rounded-lg font-light" to="/who-am-i" @click.native="mobileMenuActive = false">
-          <span class="icon">
-            <i class="las la-user"></i>
-          </span>
-          <span>Who am I</span>
-        </nuxt-link>
-      </div>
-      <div>
-        <a class="hover:bg-coolGray-200 hover:text-primary py-3 px-2 rounded-lg font-light" href="https://drive.google.com/file/d/19KGcsqEoaJAqgnSmGSzksLA4xhSLTrZ_/view?usp=sharing" target="_blank">
-          <span class="icon">
-            <i class="las la-file-pdf"></i>
-          </span>
-          <span>Résumé</span>
+  <div>
+    <nav class="flex flex-wrap items-center justify-between h-16 relative">
+      <div class="brand w-full h-full pt-3 md:w-auto flex flex-row">
+        <div class="menu-mobile-trigger visible md:invisible" @click="toggleMobileMenu()">
+          <i class="las la-bars text-2xl pl-3 pt-1 pr-3 text-primary visible md:invisible cursor-pointer"></i>
+        </div>
+        <a class="logo text-3xl text-primary pl-5 md:pl-3 bg-white" href="/">
+          dnlnrs
         </a>
       </div>
-      <div>
-        <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-3 px-2 rounded-lg font-light" to="/snippets" @click.native="mobileMenuActive = false">
-          <span class="icon">
-            <i class="las la-code"></i>
-          </span>
-          <span>Snippets</span>
-        </nuxt-link>
+      <div class="menu flex flex-row pr-3 space-x-4 invisible md:visible">
+        <div v-for="(item, index) of menuItems" :key="index">
+          <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-3 px-2 rounded-lg font-light" :to="item.url">
+            <span class="icon">
+              <i :class="`las la-${item.icon}`"></i>
+            </span>
+            <span>{{ item.label }}</span>
+          </nuxt-link>
+        </div>
       </div>
-      <div>
-        <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-3 px-2 rounded-lg font-light" to="/blog" @click.native="mobileMenuActive = false">
-          <span class="icon">
-            <i class="las la-newspaper"></i>
-          </span>
-          <span>Blog</span>
-        </nuxt-link>
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </template>
 
 <script>
 export default {
+  props: {
+    menuItems: {
+      type: Array,
+      default: () => ([])
+    }
+  },
   data: () => ({
-    mobileMenuActive: false
+    mobileMenuActive: false,
   }),
   methods: {
     toggleMobileMenu () {
       this.mobileMenuActive = !this.mobileMenuActive
+      this.$emit('toggleMobileMenu', this.mobileMenuActive)
     }
   }
 }
