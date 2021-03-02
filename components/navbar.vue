@@ -9,7 +9,7 @@
           dnlnrs
         </a>
       </div>
-      <div class="menu flex flex-row pr-3 space-x-4 invisible md:visible">
+      <div class="menu flex-row pr-3 space-x-4 hidden md:flex">
         <div v-for="(item, index) of menuItems" :key="index">
           <nuxt-link class="hover:bg-coolGray-200 hover:text-primary py-3 px-2 rounded-lg font-light" :to="item.url">
             <span class="icon">
