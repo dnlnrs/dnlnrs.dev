@@ -2,7 +2,7 @@
   <section class="font-body">
     <Navbar :menu-items="menuItems" @toggleMobileMenu="toggleMobileMenu" />
     <MenuMobile :menu-items="menuItems" :is-active="mobileMenuActive" />
-    <div class="container mx-auto h-screen">
+    <div class="container mx-auto h-screen -my-16">
       <nuxt />
     </div>
   </section>

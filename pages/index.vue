@@ -2,20 +2,32 @@
   <div class="flex flex-row flex-wrap items-center h-full">
     <div class="flex-grow">
       <div class="grid grid-flow-row place-content-center place-items-center">
-        <div class="rounded block bg-local w-32 h-32 avatar bg-center bg-cover">
+        <div class="rounded-full block bg-local w-32 h-32 mb-5 avatar bg-center bg-cover">
         </div>
-        <div class="text-center text-xl">
-          <p class="is-size-5">Hello! I'm <strong>Daniele</strong>, nice to meet you!</p>
-          <p class="is-size-5">I'm a <em><strong>Full Stack Web Developer</strong></em> currently working as <strong><em>CTO</em></strong> @</p>
-          <a href="https://www.bloovery.com" target="_blank">
-            <img class="w-64" src="~/assets/images/logo-bloovery.png">
-          </a>
+        <div class="text-center text-xl mx-10 font-light text-gray-700">
+          <p class="text-xl pb-5">Hello! I'm <strong>Daniele</strong>, <br> nice to meet you!</p>
+          <p class="text-xl">I'm a <em><strong>Full Stack Web Developer</strong></em> currently working as <strong><em>CTO</em></strong> @</p>
+          <div class="mx-auto w-32">
+            <figure>
+              <a href="https://www.bloovery.com" target="_blank">
+                <img alt="bloovery" src="~/assets/images/logo-bloovery.png">
+              </a>
+            </figure>
+          </div>
+          <p class="text-xl pt-5">and as a <strong>Freelance</strong> with</p>
+          <div class="mx-auto w-32">
+            <figure>
+              <a href="https://codebits.it" target="_blank">
+                <img alt="codebits" src="~/assets/images/logo-codebits.png">
+              </a>
+            </figure>
+          </div>
         </div>
       </div>
     </div>
-    <div class="flex-grow">
+    <!-- <div class="flex-grow">
       <img width="70%" src="~/assets/images/programming_illustration.svg" alt="">
-    </div>
+    </div> -->
   </div>
   <!-- <div class="columns is-vcentered">
     <div class="column is-6 has-text-centered">
